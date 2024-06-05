@@ -1,0 +1,56 @@
+{
+	"name": "@arunvaradharajalu/common.decorators",
+	"version": "1.0.0",
+	"description": "This package contains decorators for controller, route methods and express middleware",
+	"main": "./build/index.ts",
+	"types": "./build/index.d.ts",
+	"files": [
+		"build/**/*"
+	],
+	"scripts": {
+		"clean": "rimraf build",
+		"build": "npm run clean && tsc --project tsconfig.build.json",
+		"test": "jest --watchAll --verbose --no-cache --detectOpenHandles --env=node --coverage"
+	},
+	"jest": {
+		"preset": "ts-jest",
+		"testEnvironment": "node",
+		"roots": [
+			"<rootDir>/test"
+		],
+		"clearMocks": true,
+		"reporters": [
+			"default",
+			[
+				"./node_modules/jest-html-reporter",
+				{
+					"pageTitle": "Decorator Test Report"
+				}
+			]
+		]
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+ssh://git@github.com/arunv11u/common.decorators.git"
+	},
+	"keywords": [
+		"decorators"
+	],
+	"author": "Arun Varadharajalu",
+	"license": "ISC",
+	"bugs": {
+		"url": "https://github.com/arunv11u/common.decorators/issues"
+	},
+	"homepage": "https://github.com/arunv11u/common.decorators#readme",
+	"devDependencies": {
+		"@types/express": "^4.17.21",
+		"@types/jest": "^29.5.12",
+		"jest-html-reporter": "^3.10.2",
+		"rimraf": "^5.0.7",
+		"ts-jest": "^29.1.4"
+	},
+	"dependencies": {
+		"@arunvaradharajalu/common.app-router": "^1.1.8",
+		"reflect-metadata": "^0.2.2"
+	}
+}
