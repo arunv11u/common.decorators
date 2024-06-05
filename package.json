@@ -2,7 +2,7 @@
 	"name": "@arunvaradharajalu/common.decorators",
 	"version": "1.0.1",
 	"description": "This package contains decorators for controller, route methods and express middleware",
-	"main": "./build/index.ts",
+	"main": "./build/index.js",
 	"types": "./build/index.d.ts",
 	"files": [
 		"build/**/*"
